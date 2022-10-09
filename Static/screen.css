@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Monda');
+@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+#logo {
+  padding-left: 25px;
+  width: 320px;
+}
+
+#header {
+  /*background-color: #DFE;
+  background-image: url(largeshroombg.jpg), url(neon-mushrooms-pattern.jpg);
+  background-position: top, bottom;
+  background-repeat: repeat-x;
+  background-size: 35px; */
+  border-bottom: white 10px solid; 
+  margin-bottom: 50px; 
+  padding-top: 50px;
+  padding-bottom: 40px; 
+  text-align: center; 
+    background-image: url(blue_neon3c.png);
+    background-repeat: repeat-x;
+}
+
+body {
+  background-color: black;
+    background-image: url(neon-mushrooms-pattern2.jpg);
+  color: #2A8;
+  font-family: 'Monda', sans-serif;
+  margin: 0;
+    padding-bottom: 50px;
+    
+}
+
+h1 {
+  color: #ca38cc;
+  font-family: 'Covered By Your Grace', 'Yellowtail', cursive;
+  font-size: 3em;
+  margin: 0;
+}
+
+h2 {
+  color: #18dad6;
+  font-family: 'Indie Flower', cursive;
+    text-align: center;
+    font-size: 40px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}

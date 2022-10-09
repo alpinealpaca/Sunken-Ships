@@ -1,0 +1,35 @@
+
+
+{% extends "base.html" %}
+
+{% block title %}Sunken Ships{% endblock %}
+
+{% block content %}
+    <div id="header">
+
+      <img src="{{ url_for('static', filename='shroom_logo9.png') }}" id="logo" />
+      <h1>Ship Chart</h1>
+      <em>Toadstools &bull; Fungus &bull; Mushrooms</em>
+
+
+    </div>
+
+    <div id="backdrop1">
+
+        <em>Need a mushroom?</em>
+        <h2>Personalised Mushrooms</h2>
+        
+        
+      <p>
+        <a class="btn-green" href="{{ url_for('myshroom') }}">Generate Now</a>
+      </p> 
+        
+     
+    </div>
+
+   <!-- <div class="footer">
+        <div class="container-fluid">
+            <p>SHROOM.INC </p>
+       </div> 
+    </div> -->
+{% endblock %}
