@@ -20,13 +20,13 @@
   padding-top: 50px;
   padding-bottom: 40px; 
   text-align: center; 
-    background-image: url(blue_neon3c.png);
+    background-image: url("static/map.png");
     background-repeat: repeat-x;
 }
 
 body {
   background-color: black;
-    background-image: url(neon-mushrooms-pattern2.jpg);
+    background-image: url("map.png");
   color: #2A8;
   font-family: 'Monda', sans-serif;
   margin: 0;
