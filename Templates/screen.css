@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Monda');
 @import url('https://fonts.googleapis.com/css?family=Yellowtail');
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@font-face {
+        font-family: "pirate";
+        src: url("piratescroll.otf")}
+@font-face {
+        font-family: "pirate";
+        src: url("static/piratescroll.otf")}
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
@@ -36,7 +41,7 @@ body {
 
 h1 {
   color: #ca38cc;
-  font-family: 'Covered By Your Grace', 'Yellowtail', cursive;
+  font-family: 'Covered By Your Grace', 'pirate', 'Yellowtail'';
   font-size: 3em;
   margin: 0;
 }
@@ -52,5 +57,45 @@ a {
   color: #000;
   text-decoration: none;
 }
+
+/*__________________________*/
+
+html, body{
+  padding: 60px;
+  text-align: center;
+}
+
+.TheMap{
+  position: relative;
+  top: 80px;
+  left: 0;
+  width: 2000px;
+  height: 100px;
+  border: 7px solid #73AD55;
+  background-image: url("map.png"); 
+  background-color: #cccccc;  
+  height: 1333px;
+  width: 2000px;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+
+svg {
+    position: relative;    
+    outline: 1px dashed #500;
+      }
+
+svg .stroked {
+        stroke: #000;
+        stroke-width: 3;
+      }
+
+#boarded {
+    
+    
+}
+
+
 
 /*https://zenodo.org/record/4583802#.Y0ytauxBwUE    https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.39/*/

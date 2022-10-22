@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="screen.css" />
-    <script src="matter.js"></script>
+    
 
 </head>
 
@@ -26,91 +26,146 @@
     
     <div id="header">
 
-          <img src="{{ url_for('static', filename='shroom_logo9.png') }}" id="logo" />
-          <h1>Ship Chart</h1>
-          <em>Toadstools &bull; Fungus &bull; Mushrooms</em>
-
-
-        </div>
-
-        <div id="backdrop1">
-
-            <em>Interactive Map</em>
-            <h2>Sunken Ships</h2>
-
-
-          <p>
-            <a class="btn-green" href="{{ url_for('myshroom') }}">Generate Now</a>
-          </p> 
-
-
-        </div>
-
-       <!-- <div class="footer">
-            <div class="container-fluid">
-                <p>SHROOM.INC </p>
-           </div> 
-        </div> 
-    {% endblock %}-->
+        
+        <h1>Ship Chart</h1>
+        
+        <em>Interactive Map</em>
+        <h2>Sunken Ships</h2>
+    </div>
     
     
-    <script>
-			let engine = Matter.Engine.create();
+    <div id="backgroundMap">
 
-			let render = Matter.Render.create({
-				element: document.body,
-				engine: engine,
-				options: {
-					width: 1700,
-					height: 900,
-					wireframes: false,
-				},
-			});
+        
 
-			// Ground parameters
-			let ground = Matter.Bodies.rectangle(1150, 520, 600, 15, { isStatic: true });
 
-			// Slingshot position and size
-			let ball = Matter.Bodies.circle(300, 600, 15);
-			let sling = Matter.Constraint.create({
-				pointA: { x: 300, y: 600 },
-				bodyB: ball,
-				stiffness: 0.05,
-			});
+        
+    </div>
 
-			let mouse = Matter.Mouse.create(render.canvas);
-			let mouseConstraint = Matter.MouseConstraint.create(engine, {
-				mouse: mouse,
-				constraint: {
-					render: { visible: false },
-				},
-			});
-			render.mouse = mouse;
-
-			let firing = false;
-			Matter.Events.on(mouseConstraint, "enddrag", function (e) {
-				if (e.body === ball) firing = true;
-			});
-			Matter.Events.on(engine, "afterUpdate", function () {
-				if (firing && Math.abs(ball.position.x - 300) < 20 && Math.abs(ball.position.y - 600) < 20) {
-					ball = Matter.Bodies.circle(300, 600, 15);
-					Matter.World.add(engine.world, ball);
-					sling.bodyB = ball;
-					firing = false;
-				}
-			});
-
-			// Shape paramters, '8' for octagon
-			let stack = Matter.Composites.stack(900, 1, 15, 15, 0, 0, function (x, y) {
-				return Matter.Bodies.polygon(x, y, 8, 18);
-			});
-
-			Matter.World.add(engine.world, [stack, ground, ball, sling, mouseConstraint]);
-			Matter.Engine.run(engine);
-			Matter.Render.run(render);
-		</script>
     
     
     
-    </body>
-    </html>
+    <div class="TheMap">
+      
+      
+        <svg width="2000" height="1333">
+
+          <!--<rect x="60" y="15" width="50" height="50" fill="maroon" class="stroked" />
+
+          <rect x="120" y="15" width="50" height="50" fill="maroon" class="stroked" />-->
+            
+            <rect x="250" y="10" width="1" height="1000" fill="maroon"  />
+            <rect x="500" y="10" width="1" height="1000" fill="maroon" class="stroked" />
+            <rect x="750" y="10" width="1" height="1000" fill="maroon"  />
+            <rect x="1000" y="10" width="1" height="1000" fill="maroon" class="stroked" />
+            <rect x="1250" y="10" width="1" height="1000" fill="maroon"  />
+            <rect x="1500" y="10" width="1" height="1000" fill="maroon" class="stroked" />
+            <rect x="1750" y="10" width="1" height="1000" fill="maroon"  />
+            
+            <rect y="250" x="10" height="1" width="2000" fill="maroon"  />
+            <rect y="500" x="10" height="1" width="2000" fill="maroon" class="stroked" />
+            <rect y="750" x="10" height="1" width="2000" fill="maroon"  />
+            <rect y="1000" x="10" height="1" width="2000" fill="maroon" class="stroked" />
+            <rect y="1250" x="10" height="1" width="2000" fill="maroon"  />
+            <rect y="1500" x="10" height="1" width="2000" fill="maroon" class="stroked" />
+            <rect y="1750" x="10" height="1" width="2000" fill="maroon"  />
+            
+            
+            <!--South America-->
+            <ellipse cx="600" cy="665" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="685" cy="730" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="590" cy="700" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="735" cy="910" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="580" cy="710" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="570" cy="760" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="565" cy="780" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <!--Africa-->
+            <ellipse cx="870" cy="660" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="890" cy="720" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="895" cy="725" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="970" cy="735" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="985" cy="745" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="995" cy="755" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1005" cy="775" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="940" cy="745" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1010" cy="785" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1017" cy="805" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1155" cy="790" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1155" cy="810" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1140" cy="880" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1105" cy="575" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1100" cy="580" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1110" cy="590" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1110" cy="590" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <!--India-->
+            <ellipse cx="1290" cy="650" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1310" cy="700" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1410" cy="650" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1390" cy="655" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1365" cy="675" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1360" cy="680" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <!--South East Asia-->
+            <ellipse cx="1570" cy="780" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1560" cy="775" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1500" cy="780" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1560" cy="785" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1500" cy="750" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1540" cy="800" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1520" cy="800" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1500" cy="800" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1490" cy="790" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1480" cy="780" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1480" cy="750" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1440" cy="750" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1480" cy="720" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1550" cy="710" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            <ellipse cx="1540" cy="740" rx="15" ry="15" id="boarded"  class="stroked" fill="orange" />
+            
+            <!-- BLUE -->
+            <ellipse cx="1175" cy="760" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <ellipse cx="1190" cy="780" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <ellipse cx="1200" cy="800" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <ellipse cx="1215" cy="725" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <ellipse cx="1220" cy="740" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <ellipse cx="1215" cy="750" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <ellipse cx="1195" cy="690" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <ellipse cx="995" cy="765" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
+            <!-- Purple -->
+            <ellipse cx="1160" cy="675" rx="15" ry="15" id="FiredAt"  class="stroked" fill="purple" />
+            <ellipse cx="1230" cy="630" rx="15" ry="15" id="FiredAt"  class="stroked" fill="purple" />
+            
+            <!--Pink-->
+            <ellipse cx="1205" cy="685" rx="15" ry="15" id="Hijacked"  class="stroked" fill="hotpink" />
+            <ellipse cx="1215" cy="680" rx="15" ry="15" id="Hijacked"  class="stroked" fill="hotpink" />
+            <ellipse cx="930" cy="750" rx="15" ry="15" id="Hijacked"  class="stroked" fill="hotpink" />
+            <ellipse cx="975" cy="750" rx="15" ry="15" id="Hijacked"  class="stroked" fill="hotpink" />
+            <ellipse cx="1550" cy="780" rx="15" ry="15" id="Hijacked"  class="stroked" fill="hotpink" />
+            <ellipse cx="1470" cy="760" rx="15" ry="15" id="Hijacked"  class="stroked" fill="hotpink" />
+            
+            <!--yellow-->
+            <ellipse cx="575" cy="730" rx="15" ry="15" id="boarded"  class="stroked" fill="yellow" />
+            <ellipse cx="560" cy="750" rx="15" ry="15" id="boarded"  class="stroked" fill="yellow" />
+            <ellipse cx="1170" cy="680" rx="15" ry="15" id="FiredAt"  class="stroked" fill="yellow" />
+            <ellipse cx="1210" cy="695" rx="15" ry="15" id="FiredAt"  class="stroked" fill="yellow" />
+            <ellipse cx="910" cy="580" rx="15" ry="15" id="FiredAt"  class="stroked" fill="yellow" />
+            
+
+        </svg>
+      </div>
+    
+    
+    
+    <div class="button">
+        <a href="file:///Users/21013292/Documents/GitHub/SunkenShips-Workshop/index2022.html">2015</a>
+      </div>
+    
+    
+     
+    
+    
+    
+    <!--
+<script src="js.js"></script> https://iilss.net/piracy-map-of-the-world2019-2020-2021-2022/-->
+    
+</body>
+</html>
