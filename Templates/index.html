@@ -1,11 +1,5 @@
 
 
-<!--{% extends "base.html" %}
-
-{% block title %}Sunken Ships{% endblock %}
-
-{% block content %}-->
-
 <!DOCTYPE html>
  
 <html>
@@ -15,11 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="screen.css" />
-    
 
 </head>
 
-    
     
     
 <body>
@@ -27,14 +19,67 @@
     <div id="header">
 
         
-        <h1>Ship Chart</h1>
+        <h1>Map of Pirate Attacks</h1>
         
-        <em>Interactive Map</em>
-        <h2>Sunken Ships</h2>
+        <em>2019-2022</em>
+        <h2><!--adds a perfect space--></h2> 
+        
+        <div id="buttons">   
+                <a href="index.html"><span style="color:white">All</span></a> <span class="wave">|</span> 
+                <a href="boarded.html"><span style="color:orange">Boarded</span> </a> 
+                 <span class="wave">|</span> 
+                <a href="hijacked.html">Hijacked</a> <span class="wave">|</span> 
+                <a href="firedat.html">Fired At</a> <span class="wave">|</span> 
+                <a href="suspicious.html">Attempted</a>
+                </div>
+        
+             
+            <a href="attempted.html">
+                <svg width="120" height="60">
+                    <g>
+                    <rect x="2" y="2" width="110" height="50" rx="15" fill="yellow" class="stroked" />
+                    <text x="10" y="33" font-family="papyrus" font-size="20" fill="#200"> Attempted </text>
+                    </g>
+                </svg>
+               
+            </a>  
+            <a href="boarded.html">
+                 <svg width="120" height="60">
+                    <g>
+                    <rect x="2" y="2" width="110" height="50" rx="15" fill="orange" class="stroked" />
+                    <text x="17" y="33" font-family="papyrus" font-size="20" fill="#200"> Boarded </text>
+                    </g>
+                </svg>
+            </a>  
+            <a href="firedat.html">
+                <svg width="120" height="60">
+                    <g>
+                    <rect x="2" y="2" width="110" height="50" rx="15" fill="#00a8f3" class="stroked" />
+                    <text x="23" y="33" font-family="papyrus" font-size="20" fill="#200"> Fired at </text>
+                    </g>
+                </svg>
+            </a> 
+            <a href="hijacked.html">
+                <svg width="120" height="60">
+                    <g>
+                    <rect x="2" y="2" width="110" height="50" rx="15" fill="hotpink" class="stroked" />
+                    <text x="19" y="33" font-family="papyrus" font-size="20" fill="#200"> Hijacked </text>
+                    </g>
+                </svg>
+            </a> 
+            <a href="suspicious.html">
+                <svg width="120" height="60">
+                    <g>
+                    <rect x="2" y="2" width="110" height="50" rx="15" fill="mediumpurple" class="stroked" />
+                    <text x="10" y="33" font-family="papyrus" font-size="20" fill="#200"> Suspicious </text>
+                    </g>
+                </svg>
+            </a> 
+        
     </div>
     
     
-    <div id="backgroundMap">
+    <div id="backgroundMap" >
 
         
 
@@ -54,21 +99,7 @@
 
           <rect x="120" y="15" width="50" height="50" fill="maroon" class="stroked" />-->
             
-            <rect x="250" y="10" width="1" height="1000" fill="maroon"  />
-            <rect x="500" y="10" width="1" height="1000" fill="maroon" class="stroked" />
-            <rect x="750" y="10" width="1" height="1000" fill="maroon"  />
-            <rect x="1000" y="10" width="1" height="1000" fill="maroon" class="stroked" />
-            <rect x="1250" y="10" width="1" height="1000" fill="maroon"  />
-            <rect x="1500" y="10" width="1" height="1000" fill="maroon" class="stroked" />
-            <rect x="1750" y="10" width="1" height="1000" fill="maroon"  />
             
-            <rect y="250" x="10" height="1" width="2000" fill="maroon"  />
-            <rect y="500" x="10" height="1" width="2000" fill="maroon" class="stroked" />
-            <rect y="750" x="10" height="1" width="2000" fill="maroon"  />
-            <rect y="1000" x="10" height="1" width="2000" fill="maroon" class="stroked" />
-            <rect y="1250" x="10" height="1" width="2000" fill="maroon"  />
-            <rect y="1500" x="10" height="1" width="2000" fill="maroon" class="stroked" />
-            <rect y="1750" x="10" height="1" width="2000" fill="maroon"  />
             
             
             <!--South America-->
@@ -131,8 +162,8 @@
             <ellipse cx="1195" cy="690" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
             <ellipse cx="995" cy="765" rx="15" ry="15" id="FiredAt"  class="stroked" fill="#00a8f3" />
             <!-- Purple -->
-            <ellipse cx="1160" cy="675" rx="15" ry="15" id="FiredAt"  class="stroked" fill="purple" />
-            <ellipse cx="1230" cy="630" rx="15" ry="15" id="FiredAt"  class="stroked" fill="purple" />
+            <ellipse cx="1160" cy="675" rx="15" ry="15" id="FiredAt"  class="stroked" fill="mediumpurple" />
+            <a><ellipse cx="1230" cy="630" rx="15" ry="15" id="FiredAt"  class="stroked" fill="mediumpurple" /></a>
             
             <!--Pink-->
             <ellipse cx="1205" cy="685" rx="15" ry="15" id="Hijacked"  class="stroked" fill="hotpink" />

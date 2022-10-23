@@ -3,9 +3,9 @@
 @font-face {
         font-family: "pirate";
         src: url("piratescroll.otf")}
-@font-face {
-        font-family: "pirate";
-        src: url("static/piratescroll.otf")}
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
@@ -15,40 +15,34 @@
 }
 
 #header {
-  /*background-color: #DFE;
-  background-image: url(largeshroombg.jpg), url(neon-mushrooms-pattern.jpg);
-  background-position: top, bottom;
-  background-repeat: repeat-x;
-  background-size: 35px; */
-  border-bottom: white 10px solid; 
-  margin-bottom: 50px; 
-  padding-top: 50px;
-  padding-bottom: 40px; 
+  border-bottom: #07d0bc 5px solid; 
   text-align: center; 
     background-image: url("static/map.png");
     background-repeat: repeat-x;
 }
 
 body {
-  background-color: black;
+  background-color: antiquewhite;
     /*background-image: url("map.png");*/
-  color: #2A8;
-  font-family: 'Monda', sans-serif;
+  color: black;
+  font-family: 'papyrus', sans-serif;
   margin: 0;
-    padding-bottom: 50px;
+    
+    
+    
     
 }
 
 h1 {
-  color: #ca38cc;
-  font-family: 'Covered By Your Grace', 'pirate', 'Yellowtail'';
-  font-size: 3em;
+  color: maroon;
+  font-family: 'helvetica', 'pirate', 'Yellowtail'';
+  font-size: 50px;
   margin: 0;
 }
 
 h2 {
   color: #18dad6;
-  font-family: 'Indie Flower', cursive;
+    font-family: 'papyrus', cursive;
     text-align: center;
     font-size: 40px;
 }
@@ -61,17 +55,17 @@ a {
 /*__________________________*/
 
 html, body{
-  padding: 60px;
-  text-align: center;
+  padding: 10px; /*<---------------------------<*/
+  
 }
 
 .TheMap{
   position: relative;
-  top: 80px;
-  left: 0;
+  top: 50px;
   width: 2000px;
   height: 100px;
-  border: 7px solid #73AD55;
+  border: 8px solid maroon;
+    
   background-image: url("map.png"); 
   background-color: #cccccc;  
   height: 1333px;
@@ -79,23 +73,31 @@ html, body{
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover; 
+
+    
+    
 }
 
 svg {
     position: relative;    
-    outline: 1px dashed #500;
+    /*outline: 1px dashed #500;*/
       }
 
 svg .stroked {
-        stroke: #000;
+        stroke: #200;
         stroke-width: 3;
       }
 
-#boarded {
-    
+#buttons {
+    font-size: 22px;
+    font-family: 'papyrus';
     
 }
 
 
 
-/*https://zenodo.org/record/4583802#.Y0ytauxBwUE    https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.39/*/
+/*https://zenodo.org/record/4583802#.Y0ytauxBwUE    https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.39/
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+*/
