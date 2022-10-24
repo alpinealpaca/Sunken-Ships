@@ -1,81 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Monda');
-@import url('https://fonts.googleapis.com/css?family=Yellowtail');
-@font-face {
-        font-family: "pirate";
-        src: url("piratescroll.otf")}
-
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
-#logo {
-  padding-left: 25px;
-  width: 320px;
-}
+
+
 
 #header {
-  border-bottom: #07d0bc 5px solid; 
+  border-bottom: maroon 5px solid; 
   text-align: center; 
-    background-image: url("static/map.png");
-    background-repeat: repeat-x;
 }
 
 body {
-  background-color: antiquewhite;
+    background-color: antiquewhite;
     /*background-image: url("map.png");*/
-  color: black;
-  font-family: 'papyrus', sans-serif;
-  margin: 0;
-    
-    
-    
-    
+    color: black;
+    font-family: 'papyrus', sans-serif;
+    margin: 0;  
 }
 
 h1 {
-  color: maroon;
-  font-family: 'helvetica', 'pirate', 'Yellowtail'';
-  font-size: 50px;
-  margin: 0;
+    color: maroon;
+    margin: 0;
+    font-size: 40px;
+      
 }
 
 h2 {
-  color: #18dad6;
+    color: #18dad6;
     font-family: 'papyrus', cursive;
     text-align: center;
     font-size: 40px;
+      
 }
 
 a {
-  color: #000;
-  text-decoration: none;
+      color: #000;
+      text-decoration: none;
 }
 
-/*__________________________*/
 
 html, body{
-  padding: 10px; /*<---------------------------<*/
+    padding: 20px; 
   
 }
 
 .TheMap{
-  position: relative;
-  top: 50px;
-  width: 2000px;
-  height: 100px;
-  border: 8px solid maroon;
-    
-  background-image: url("map.png"); 
-  background-color: #cccccc;  
-  height: 1333px;
-  width: 2000px;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
+      position: relative;
+      top: 10px;
+      border: 8px solid maroon; 
+      background-image: url("map.png"); 
+      background-repeat: no-repeat; 
+      background-size: cover; 
+      height: 1125px;
+      width: 1795px;
+  
 
-    
-    
 }
 
 svg {
@@ -83,15 +60,36 @@ svg {
     /*outline: 1px dashed #500;*/
       }
 
-svg .stroked {
+
+svg .buttons {
         stroke: #200;
         stroke-width: 3;
+    
       }
 
-#buttons {
+
+
+svg .stroked {
+        stroke: #200;
+        stroke-width: 2.5;
+        transform: translate(-130px, -90px); /*am not rewriting those points*/
+      }
+
+#descr {
     font-size: 22px;
     font-family: 'papyrus';
+     
     
+}
+
+#pirateship {
+    position: absolute;
+    padding-left: 70%;
+    top: 30px;
+}
+
+#header, #years {
+    font-size: 20px;
 }
 
 
